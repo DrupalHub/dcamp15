@@ -46,16 +46,19 @@
           <a href="#services" onclick = $("#menu-close").click(); >Why should I come?</a>
         </li>
         <li>
-          <a href="#services" onclick = $("#menu-close").click(); >The speakers</a>
+          <a href="#portfolio" onclick = $("#menu-close").click(); >The speakers</a>
         </li>
         <li>
-          <a href="#contact" onclick = $("#menu-close").click(); >Support the event</a>
+          <a href="#support" onclick = $("#menu-close").click(); >Support the event</a>
         </li>
         <li>
-          <a href="#contact" onclick = $("#menu-close").click(); >Get tickets!</a>
+          <a href="#tickets" onclick = $("#menu-close").click(); >Get tickets!</a>
         </li>
         <li>
           <a href="#map" onclick = $("#menu-close").click(); >Map</a>
+        </li>
+        <li>
+          <a href="#footer" onclick = $("#menu-close").click(); >Sponsers and information</a>
         </li>
       </ul>
     </nav>
@@ -150,40 +153,46 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
-            <h2>Our Work</h2>
+            <h2>The speakers</h2>
             <hr class="small">
             <div class="row">
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="#">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                  </a>
-                </div>
-              </div>
+              <p>We don't have speakers for now. If you'ld like to you can send us an E-mail and we will get back to you!</p>
+              <form class="form-horizontal">
+                <fieldset>
+                  <div class="form-group">
+                    <label for="inputName" class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputCompany" class="col-lg-2 control-label">company</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputCompany" placeholder="Company">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" rows="3" id="textArea" placeholder="Tell us a little bit on your presentation"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="reset" class="btn btn-default">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
             </div>
             <!-- /.row (nested) -->
-            <a href="#" class="btn btn-dark">View More Items</a>
           </div>
           <!-- /.col-lg-10 -->
         </div>
@@ -193,26 +202,48 @@
     </section>
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
+    <section id="support" class="call-to-action bg-primary">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h3>The buttons below are impossible to resist.</h3>
-            <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-            <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+            <div class="col-lg-10 col-lg-offset-1">
+              <h2>Support the event!</h2>
+              <hr class="small">
+              <div class="row">
+                Help us and support the event
+              </div>
+              <!-- /.row (nested) -->
+            </div>
           </div>
         </div>
       </div>
-    </aside>
+    </section>
+
+    <section id="tickets" class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+              <h2>Support the event!</h2>
+              <hr class="small">
+              <div class="row">
+                Help us and support the event
+              </div>
+              <!-- /.row (nested) -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Map -->
-    <section id="contact" class="map">
+    <section id="map" class="map">
       <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=he&amp;geocode=&amp;q=Electra Tower, Tel Aviv-Yafo&amp;aq=0&amp;oq=twitter&amp;sll=32.0699972,34.7940928&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
       </iframe>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
