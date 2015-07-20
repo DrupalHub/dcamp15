@@ -399,7 +399,7 @@ module.exports = function (grunt) {
             '*.html',
             'images/{,*/}*.{webp}',
             'img/*',
-            'js',
+            'js/*',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
@@ -481,12 +481,12 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
-    'ngtemplates',
-    'concat',
+    //'autoprefixer',
+    //'ngtemplates',
+    //'concat',
     'ngAnnotate',
     'copy:dist',
-    //'cdnify',
+    'cdnify',
     'cssmin',
     'uglify',
     'filerev',
