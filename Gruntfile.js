@@ -21,6 +21,7 @@ module.exports = function (grunt) {
 
 
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-build-control');
 
   // Configurable paths for the application
   var appConfig = {
@@ -385,6 +386,17 @@ module.exports = function (grunt) {
       }
     },
 
+    uglify: {
+      my_target: {
+        files: [{
+          expand: true,
+          cwd: 'src/js',
+          src: '**/*.js',
+          dest: 'dest/js'
+        }]
+      }
+    },
+
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -402,17 +414,26 @@ module.exports = function (grunt) {
             'js/*',
             'styles/fonts/{,*/}*.*'
           ]
-        }, {
+        },
+        {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
-        }, {
+        },
+        {
           expand: true,
           cwd: '.',
           src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= yeoman.dist %>'
-        }]
+        },
+          {
+            expand: true,
+            cwd: 'bower_components/font-awesome/fonts/',
+            src: ['*.*'],
+            dest: '<%= yeoman.dist %>/fonts'
+          }
+        ]
       },
       styles: {
         expand: true,
@@ -435,6 +456,17 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    buildcontrol: {
+      dist: {
+        options: {
+          remote: 'git@github.com:DrupalHub/dcamp15.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
+      }
     },
 
     // Test settings
@@ -486,7 +518,7 @@ module.exports = function (grunt) {
     //'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'cssmin',
     'uglify',
     'filerev',
@@ -499,4 +531,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deploy', ['buildcontrol']);
 };
