@@ -146,6 +146,9 @@ module.exports = function (grunt) {
     clean: {
       dist: {
         files: [{
+          options: {
+            force: true
+          },
           dot: true,
           src: [
             '.tmp',
@@ -318,9 +321,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/images'
+          cwd: '<%= yeoman.app %>/img',
+          src: '[*/*.{png,jpg,jpeg,gif,svg}]',
+          dest: '<%= yeoman.dist %>/img'
         }]
       }
     },
@@ -408,6 +411,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
+            'CNAME',
             '*.html',
             'images/{,*/}*.{webp}',
             'img/*',
@@ -523,7 +527,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'imagemin'
   ]);
 
   grunt.registerTask('default', [

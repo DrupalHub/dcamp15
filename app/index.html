@@ -136,9 +136,9 @@
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <h2>The speakers</h2>
             <hr class="small">
-            <div class="row">
+            <div>
               <p>We don't have speakers for now. If you'ld like to you can send us an E-mail and we will get back to you!</p>
-              <form class="form-horizontal" id="contactForm" action="MAILTO:roy@gizra.com">
+              <form class="form-horizontal" id="contactForm">
                 <fieldset>
                   <div class="form-group">
                     <label for="inputName" class="col-lg-2 control-label">Name</label>
@@ -173,7 +173,7 @@
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                       <div class="success alert-success alert" style="display:none">Your suggestion sent successfully.</div>
-                      <div class="error alert-danger alert" style="display:none">E-mail address must be valid and your message need to be more then 100 characters.</div>
+                      <div class="error alert-danger alert" style="display:none">E-mail address must be valid and your message need to be more then 25 characters.</div>
                       <button type="reset" class="btn btn-default">Cancel</button>
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
@@ -238,12 +238,16 @@
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <h4><strong>DrupalCamp TLV 2016</strong></h4>
             <br>
+            <ul  class="list-inline">
+              <li><a target="_blank" id="gizra" href="http://www.gizra.com/">gizra</a></li>
+              <li><a target="_blank" href="http://www.linnovate.net/"><img src="img/linnovate.png"></a></li>
+            </ul>
+            <hr class="small">
             <ul class="list-inline">
               <li>
                 <a href="https://www.facebook.com/groups/drupalil/"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
               </li>
             </ul>
-            <hr class="small">
           </div>
         </div>
       </div>
@@ -284,10 +288,10 @@
           return pattern.test(emailAddress);
         };
 
-        if (isValidEmail(email) && (text.length > 50) && (name.length > 1)) {
+        if (isValidEmail(email) && (text.length > 25) && (name.length > 1)) {
           $.ajax({
             type: "POST",
-            url: "http://getsimpleform.com/messages/ajax?form_api_token=82540053db7f4e09bfc21bca3f7edada",
+            url: "http://getsimpleform.com/messages/ajax?form_api_token=607e9528f7bcb74ab865f1efc8ebe4e4",
             dataType: 'jsonp',
             data: dataString,
             success: function () {
@@ -298,7 +302,6 @@
           });
         } else {
           $('.error').fadeIn(1000).delay(5000).fadeOut(1000);
-
         }
 
         return false;
