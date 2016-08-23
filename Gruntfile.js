@@ -512,7 +512,6 @@ module.exports = function (grunt) {
     'clean:dist',
     'wiredep',
     'useminPrepare',
-    'concurrent:dist',
     //'autoprefixer',
     //'ngtemplates',
     //'concat',
