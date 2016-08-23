@@ -214,6 +214,8 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
       options: {
+        // If you're using global Sass gems, require them here.
+        // require: ['singularity', 'jacket'],
         sassDir: '<%= yeoman.app %>/styles',
         cssDir: '.tmp/styles',
         generatedImagesDir: '.tmp/images/generated',
@@ -235,7 +237,8 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          sourcemap: false
+          debugInfo: true,
+          generatedImagesDir: '.tmp/images/generated'
         }
       }
     },
@@ -512,6 +515,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'wiredep',
     'useminPrepare',
+    'concurrent:dist',
     //'autoprefixer',
     //'ngtemplates',
     //'concat',
