@@ -532,5 +532,5 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('deploy', ['buildcontrol']);
+  grunt.registerTask('deploy', ['build','buildcontrol']);
 };
