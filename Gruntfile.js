@@ -238,7 +238,8 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          sourcemap: true
+          debugInfo: true,
+          generatedImagesDir: '.tmp/images/generated'
         }
       }
     },
