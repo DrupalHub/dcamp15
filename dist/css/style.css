@@ -1,0 +1,10 @@
+.header {
+  background-color: #000;
+  color: #fff; }
+
+.ui.vertical.navbar.menu {
+  display: none; }
+
+.ui.fixed.menu, .ui[class*="top fixed"].menu {
+  padding-right: 0px;
+  padding-left: 0px; }
