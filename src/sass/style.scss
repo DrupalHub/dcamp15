@@ -1,39 +1,7 @@
 @import 'theme/variables';
 @import 'layout/header';
+@import 'layout/upper_menu';
 
 body, a, h1, h2, h3, h4, div, p, li {
   font-family: oswald;
-}
-
-.ui.vertical.navbar.menu {
-  display: none;
-}
-
-.ui.fixed.menu, .ui[class*="top fixed"].menu {
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-.computer {
-
-  .ui.inverted.menu .item:before,
-  .ui.vertical.inverted.menu .item:before {
-    background: transparent;
-  }
-
-  .logo {
-    height: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px
-  }
-
-  .title {
-    margin: 0;
-    padding: 0;
-    font-size: 30px;
-  }
-
-  .ui.menu .item {
-    padding: 0;
-  }
 }
