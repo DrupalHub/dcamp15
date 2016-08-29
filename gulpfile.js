@@ -14,7 +14,6 @@ gulp.task('partials', function () {
 
 // Compiles, prefixes and minifies style.scss & fruits.scss
 gulp.task('sass', function () {
-  console.log('a');
   return gulp.src('./src/sass/style.scss')
     .pipe(sass().on('error', sass.logError))
     // .pipe(prefix({ browsers: ['last 3 versions'] }))
