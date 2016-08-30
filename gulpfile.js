@@ -1,7 +1,10 @@
 var gulp 		      = require('gulp'),
  	  sass 		        = require('gulp-sass'),
     browserSync     = require('browser-sync').create(),
-	  injectPartials  = require('gulp-inject-partials');
+	  injectPartials  = require('gulp-inject-partials'),
+    fs = require('fs'),
+    path = require('path'),
+    YAML = require('yamljs');
 
 // Handles partials injection on index.html
 gulp.task('partials', function () {
@@ -32,7 +35,29 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./dist/images'));
 });
 
-gulp.task('build', ['partials', 'sass', 'js', 'images']);
+gulp.task('speakers', function() {
+  var tpl = '<div class="four wide column">' +
+            '<img src="images/{{image}}" class="ui small centered circular image" />' +
+            '<h4>{{name}}</h4>' +
+            '{{job}}' +
+            '</div>';
+
+  fs.readdir('./src/speakers', function(err, files) {
+    var content = files.map(function(file) {
+      var result = YAML.load('./src/speakers/' + file);
+
+      return tpl
+        .replace('{{name}}', result.name)
+        .replace('{{job}}', result.job)
+        .replace('{{image}}', result.image);
+    });
+
+    fs.writeFileSync('src/html/includes/_speaker_list.html', content.join(""));
+  });
+
+});
+
+gulp.task('build', ['speakers', 'partials', 'sass', 'js', 'images']);
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({

@@ -9,9 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.4.3",
     "browser-sync": "^2.14.0",
     "gulp": "^3.9.1",
     "gulp-inject-partials": "^1.0.0",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "yamljs": "^0.2.8"
+  },
+  "devDependencies": {
+    "yamljs": "^0.2.8"
   }
 }
