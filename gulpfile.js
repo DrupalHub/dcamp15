@@ -14,10 +14,11 @@ gulp.task('partials', function () {
 
 // Compiles, prefixes and minifies style.scss & fruits.scss
 gulp.task('sass', function () {
-  return gulp.src('./src/sass/*.scss')
+  return gulp.src('./src/sass/style.scss')
     .pipe(sass().on('error', sass.logError))
     // .pipe(prefix({ browsers: ['last 3 versions'] }))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./dist/css'))
+    .pipe(browserSync.stream());
 });
 
 // todo: Add js performance when deploying.
@@ -26,16 +27,21 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('build', ['partials', 'sass', 'js']);
+gulp.task('images', function() {
+  return gulp.src('./src/images/*')
+    .pipe(gulp.dest('./dist/images'));
+});
 
-gulp.task('serve', ['build', 'js'], function() {
+gulp.task('build', ['partials', 'sass', 'js', 'images']);
+
+gulp.task('serve', ['build'], function() {
   browserSync.init({
     server : './dist',
-    open: true,
+    open: true
   });
 
-  gulp.watch('src/sass/*', ['sass']);
-  gulp.watch('src/js/*.', ['sass']);
+  gulp.watch('src/sass/*.scss', ['sass']);
+  gulp.watch('src/js/*.', ['js']).on('change', browserSync.reload);
   gulp.watch('src/html/index.html', ['partials']).on('change', browserSync.reload);
   gulp.watch('src/html/*/*.html', ['partials']).on('change', browserSync.reload);
 });
