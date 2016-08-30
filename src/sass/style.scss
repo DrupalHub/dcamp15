@@ -2,42 +2,9 @@
 @import 'layout/header';
 @import 'layout/upper_menu';
 @import 'layout/strip';
+@import 'layout/about';
 
 body, a, h1, h2, h3, h4, div, p, li {
   font-family: oswald;
 }
 
-.align-center {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.about {
-  background: $color1;
-  position: relative;
-  display: table;
-  width: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
-
-  h3 {
-    font-size: 50px;
-  }
-
-  p {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
-    line-height: 2;
-  }
-
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #f90;
-    margin: 0 auto;
-    width: 40%;
-    padding: 0;
-  }
-}
