@@ -1,44 +1,43 @@
 @import 'theme/variables';
 @import 'layout/header';
 @import 'layout/upper_menu';
+@import 'layout/strip';
 
 body, a, h1, h2, h3, h4, div, p, li {
   font-family: oswald;
 }
 
-.strip {
+.align-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.about {
+  background: $color1;
   position: relative;
   display: table;
-  height: 100%;
   width: 100%;
-  background: url(../images/strip.jpeg) center center no-repeat #337ab7;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
-  h1, h2 {
-    color: #fff3e7;
+  h3 {
+    font-size: 50px;
   }
 
-  h1 {
-    font-size: 140px;
+  p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    line-height: 2;
   }
 
-  h2 {
-    font-size: 100px;
-  }
-
-  .ui.primary.button {
-    margin-top: 50px;
-    background: #00a7ff;
-    color: white;
-    font-size: 36px;
-  }
-
-  .align-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #f90;
+    margin: 0 auto;
+    width: 40%;
+    padding: 0;
   }
 }
