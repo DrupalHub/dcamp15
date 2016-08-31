@@ -29,6 +29,10 @@ section {
   position: relative;
   z-index: 3;
 
+  a {
+    cursor: pointer;
+    color: black;
+  }
 
   h3 {
     padding-bottom: 50px;
@@ -48,7 +52,7 @@ section {
     line-height: 1.5;
     transition: all 500ms ease-in;
     opacity: 0;
-    z-index: 1;
+    z-index: -2;
 
     &.pop {
       opacity: 1;
@@ -61,6 +65,7 @@ section {
       right: 2%;
       top: 2%;
       z-index: 2000;
+      cursor: pointer;
     }
 
     .data {
