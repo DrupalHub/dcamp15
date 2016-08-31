@@ -36,7 +36,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('speakers', function() {
-  var tpl = '<div class="four wide column">' +
+  var tpl = '<div class="four wide column speaker-wrapper" {{data}}>' +
             '<a class="open"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
             '<h4><a class="open">{{name}}</a></h4>' +
             '<a class="open">{{job}}</a>' +
@@ -46,7 +46,12 @@ gulp.task('speakers', function() {
     var content = files.map(function(file) {
       var result = YAML.load('./src/speakers/' + file);
 
+      var bar = Object.keys(result).map(function(key) {
+        return 'data-' + key + '="' + result[key] + '"';
+      });
+
       return tpl
+        .replace('{{data}}', bar.join(' '))
         .replace('{{name}}', result.name)
         .replace('{{job}}', result.job)
         .replace('{{image}}', result.image);
@@ -65,7 +70,8 @@ gulp.task('serve', ['build'], function() {
     open: true
   });
 
-  gulp.watch('src/sass/*.scss', ['sass']);
+  gulp.watch('src/sass/*.scss', ['sass']).on('change', browserSync.reload);
+  gulp.watch('speakers', ['sass']).on('change', browserSync.reload);
   gulp.watch('src/js/*', ['js']).on('change', browserSync.reload);
   gulp.watch('src/html/index.html', ['partials']).on('change', browserSync.reload);
   gulp.watch('src/html/*/*.html', ['partials']).on('change', browserSync.reload);

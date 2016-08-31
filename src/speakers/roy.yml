@@ -2,5 +2,8 @@ name: Roy Segall
 job: Snr. developer at Gizra
 image: roy.jpg
 title: It's time go get real! Realtime with Drupal
-dsecription: "The web gone real time. How Drupal fits in this thing?"
+dsecription: >
+  Drupal is awesome for manging your content but what about real time features?<br />
+  Push notifications? Chat? Pushed content to the user? How Drupal can handle it<br />
+  Come to see about some real cool shit!
 twitter: RoySegall
