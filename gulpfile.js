@@ -71,7 +71,8 @@ gulp.task('serve', ['build'], function() {
   });
 
   gulp.watch('src/sass/*.scss', ['sass']).on('change', browserSync.reload);
-  gulp.watch('speakers', ['sass']).on('change', browserSync.reload);
+  gulp.watch('src/sass/*/*.scss', ['sass']).on('change', browserSync.reload);
+  gulp.watch('speakers').on('change', browserSync.reload);
   gulp.watch('src/js/*', ['js']).on('change', browserSync.reload);
   gulp.watch('src/html/index.html', ['partials']).on('change', browserSync.reload);
   gulp.watch('src/html/*/*.html', ['partials']).on('change', browserSync.reload);
