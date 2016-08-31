@@ -7,7 +7,6 @@ $(document).ready(function() {
   $('.ui.dropdown').dropdown();
 
   $(".open").click(function() {
-    debugger;
     $(".session-info").addClass('pop');
   });
 
