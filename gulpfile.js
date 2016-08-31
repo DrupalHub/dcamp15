@@ -37,9 +37,9 @@ gulp.task('images', function() {
 
 gulp.task('speakers', function() {
   var tpl = '<div class="four wide column">' +
-            '<img src="images/{{image}}" class="ui small centered circular image" />' +
-            '<h4>{{name}}</h4>' +
-            '{{job}}' +
+            '<a class="open"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
+            '<h4><a class="open">{{name}}</a></h4>' +
+            '<a class="open">{{job}}</a>' +
             '</div>';
 
   fs.readdir('./src/speakers', function(err, files) {
@@ -66,7 +66,7 @@ gulp.task('serve', ['build'], function() {
   });
 
   gulp.watch('src/sass/*.scss', ['sass']);
-  gulp.watch('src/js/*.', ['js']).on('change', browserSync.reload);
+  gulp.watch('src/js/*', ['js']).on('change', browserSync.reload);
   gulp.watch('src/html/index.html', ['partials']).on('change', browserSync.reload);
   gulp.watch('src/html/*/*.html', ['partials']).on('change', browserSync.reload);
 });
