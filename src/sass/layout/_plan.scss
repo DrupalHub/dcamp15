@@ -1,0 +1,41 @@
+.plan {
+  background: $color2;
+  color: white;
+  padding-bottom: 100px;
+
+  .items {
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: left;
+
+    td {
+      padding-bottom: 10px;
+
+      &.hour {
+        color: $color1;
+        font-size: 55px;
+        padding-right: 10px;
+      }
+
+      &.info {
+        font-size: 25px;
+        line-height: 1.25;
+        text-align: left;
+        padding-top: 5px;
+
+        span {
+          display: block;
+        }
+
+        &.first {
+          padding-right: 10px;
+        }
+
+        &.second {
+          border-left: white 1px solid;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
