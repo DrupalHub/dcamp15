@@ -1,0 +1,9 @@
+.map {
+  height: 500px;
+  border-top: #00cbff solid 2px;
+  border-bottom: #00cbff solid 2px;
+
+  iframe {
+    pointer-events: none;
+  }
+}
