@@ -21,6 +21,13 @@ $(document).ready(function() {
     // $session.find('.time').html(time);
     $session.find('.title').html(title);
     $session.find('.image img').attr('src', 'images/' + image);
+    $session.find('.social').html('');
+
+    if (twitter) {
+      var $social = $session.find('.social');
+      $social.append('<a class="twitter" href="https://twitter.com/' +  twitter + '" target="_blank"><i class="twitter icon"></i>' + twitter + '</a>');
+    }
+
     $session.addClass('pop');
   });
 
