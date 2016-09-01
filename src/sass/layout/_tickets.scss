@@ -1,6 +1,16 @@
 .tickets {
 
+  position: relative;
+  display: table;
+  width: 100%;
+  background: url(../images/tickets.jpeg) center center no-repeat #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
   h3 {
     padding-bottom: 50px;
+    color: #fff3e7;
   }
 }
