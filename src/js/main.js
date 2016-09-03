@@ -1,12 +1,17 @@
 $(document).ready(function() {
-  $('.right.menu.open').on("click",function(e){
-    e.preventDefault();
+  $('.right.menu.open').on("click",function(event) {
+    event.preventDefault();
+    $('.ui.vertical.menu').toggle();
+  });
+
+  $(".float-menu a").on('click', function(event) {
+    event.preventDefault();
     $('.ui.vertical.menu').toggle();
   });
 
   $('.ui.dropdown').dropdown();
 
-  $(".open").click(function() {
+  $(".speakers .open").click(function() {
     var name = $(this).parents('div.speaker-wrapper').attr('data-name');
     var job = $(this).parents('div.speaker-wrapper').attr('data-job');
     var image = $(this).parents('div.speaker-wrapper').attr('data-image');
