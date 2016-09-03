@@ -11,7 +11,7 @@ $(document).ready(function() {
 
   $('.ui.dropdown').dropdown();
 
-  $(".session-info .open").click(function() {
+  $(".speakers .open").click(function() {
     var name = $(this).parents('div.speaker-wrapper').attr('data-name');
     var job = $(this).parents('div.speaker-wrapper').attr('data-job');
     var image = $(this).parents('div.speaker-wrapper').attr('data-image');

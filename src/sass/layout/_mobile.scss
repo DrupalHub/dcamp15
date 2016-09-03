@@ -74,4 +74,36 @@
     }
   }
 
+  .speakers .session-info {
+    left: 10%;
+    top: 15%;
+    height: 30%;
+  }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+  .computer .right.menu li {
+    font-size: 15px;
+  }
+
+  .computer .ui.menu .item {
+    font-size: 20px;
+  }
+
+  .strip {
+    h1 {
+      font-size: 100px;
+    }
+
+    h2 {
+      font-size: 70px;
+    }
+
+    .ui.primary.button {
+      font-size: 30px;
+    }
+  }
+
 }

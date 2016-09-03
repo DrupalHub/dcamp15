@@ -36,7 +36,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('speakers', function() {
-  var tpl = '<div class="four wide column speaker-wrapper" {{data}}>' +
+  var tpl = '<div class="column speaker-wrapper" {{data}}>' +
             '<a class="open"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
             '<h4><a class="open">{{name}}</a></h4>' +
             '<a class="open">{{job}}</a>' +
