@@ -1,0 +1,69 @@
+.speakers {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 100px;
+
+  a {
+    cursor: pointer;
+    color: black;
+  }
+
+  h3 {
+    padding-bottom: 50px;
+  }
+
+  .session-info {
+    position: absolute;
+    background: $color2;
+    color: white;
+    width: 90%;
+    left: 5%;
+    height: 85%;
+    top: 10%;
+    padding: 30px;
+    text-align: left;
+    font-size: 25px;
+    line-height: 1.5;
+    transition: all 500ms ease-in;
+    opacity: 0;
+    z-index: -2;
+
+    &.pop {
+      opacity: 1;
+      z-index: 2000;
+    }
+
+    .remove.icon {
+      font-size: 50px;
+      position: absolute;
+      right: 2%;
+      top: 2%;
+      z-index: 2000;
+      cursor: pointer;
+    }
+
+    .data {
+
+      .time {
+        color: $color1;
+      }
+
+      div {
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+      }
+
+      .social {
+        font-size: 20px;
+
+        .twitter {
+          color: #1da1f2;
+        }
+      }
+    }
+  }
+}
