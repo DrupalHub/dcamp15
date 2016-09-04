@@ -38,9 +38,11 @@ gulp.task('images', function() {
 gulp.task('speakers', function() {
   var tpl = '<div class="column speaker-wrapper" {{data}}>' +
             '<a class="open"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
-            '<h4><a class="open">{{name}}</a></h4>' +
+            '<h4><a class="open">{{keynote}}{{name}}</a></h4>' +
             '<a class="open">{{job}}</a>' +
             '</div>';
+
+  var keynote = '';
 
   fs.readdir('./src/speakers', function(err, files) {
     var content = files.map(function(file) {
@@ -50,12 +52,22 @@ gulp.task('speakers', function() {
         return 'data-' + key + '="' + result[key] + '"';
       });
 
-      return tpl
+      var speaker_info = tpl
         .replace('{{data}}', bar.join(' '))
         .replace('{{name}}', result.name)
         .replace('{{job}}', result.job)
         .replace('{{image}}', result.image);
+
+      if (result.keynote != undefined) {
+        keynote = speaker_info
+          .replace('{{keynote}}', '<span class="keynote">Keynote: </span>');
+        return '';
+      }
+
+      return speaker_info.replace('{{keynote}}', '');
     });
+
+    content.unshift(keynote);
 
     fs.writeFileSync('src/html/includes/_speaker_list.html', content.join(""));
   });
