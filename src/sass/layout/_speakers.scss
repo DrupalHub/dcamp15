@@ -12,6 +12,18 @@
     padding-bottom: 50px;
   }
 
+  .keynote {
+    color: $drupal-color;
+  }
+
+  .speaker-wrapper {
+
+    .ui.small.image, .ui.small.images .image, .ui.small.images img, .ui.small.images svg {
+      width: auto;
+      height: 150px;
+    }
+  }
+
   .session-info {
     position: absolute;
     background: $color2;
