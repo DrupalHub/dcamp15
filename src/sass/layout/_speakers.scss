@@ -25,11 +25,16 @@
   }
 
   .speaker-wrapper {
-    min-width: 250px !important;
+    min-width: 260px !important;
 
     .ui.small.image, .ui.small.images .image, .ui.small.images img, .ui.small.images svg {
       width: auto;
       height: 150px;
+    }
+
+    h4 {
+      margin-top: 25px;
+      margin-bottom: 10px;
     }
   }
 
