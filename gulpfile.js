@@ -47,9 +47,9 @@ gulp.task('fonts-vista', function() {
 
 gulp.task('speakers', function() {
   var tpl = '<div class="column speaker-wrapper" {{data}}>' +
-            '<a class="open"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
-            '<h4><a class="open">{{keynote}}{{name}}</a></h4>' +
-            '<a class="open">{{job}}</a>' +
+            '<a class="open image"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
+            '<h4><a class="open name">{{keynote}}{{name}}</a></h4>' +
+            '<a class="open job">{{job}}</a>' +
             '</div>';
 
   var keynote = '';
