@@ -35,6 +35,16 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./dist/images'));
 });
 
+gulp.task('fonts-bebas', function() {
+  return gulp.src('./src/fonts/bebas/*')
+    .pipe(gulp.dest('./dist/fonts/bebas'));
+});
+
+gulp.task('fonts-vista', function() {
+  return gulp.src('./src/fonts/vista/*')
+    .pipe(gulp.dest('./dist/fonts/vista'));
+});
+
 gulp.task('speakers', function() {
   var tpl = '<div class="column speaker-wrapper" {{data}}>' +
             '<a class="open"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
@@ -74,7 +84,7 @@ gulp.task('speakers', function() {
 
 });
 
-gulp.task('build', ['speakers', 'partials', 'sass', 'js', 'images']);
+gulp.task('build', ['speakers', 'partials', 'sass', 'js', 'images', 'fonts-bebas', 'fonts-vista']);
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({
