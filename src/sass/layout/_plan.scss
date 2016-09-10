@@ -20,6 +20,7 @@
       div {
         float: left;
         display: table-column;
+        width: 120px;
       }
     }
 
@@ -35,18 +36,19 @@
 
     .location {
       padding-right: 10px;
+      width: 55px !important;
 
       p {
         background-color: $turquoise;
-        padding: 12px;
         color: black;
         border-radius: 50%;
         line-height: 1;
         text-align: center;
         text-transform: uppercase;
-        height: 60px;
-        padding-top: 14px;
-        font-size: 17px;
+        height: 45px;
+        padding: 11px 10px 10px;
+        font-size: 13px;
+        margin-top: 5px;
       }
 
       &.small {
@@ -58,7 +60,7 @@
     }
 
     .info {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1.25;
       text-align: left;
       padding-top: 5px;
