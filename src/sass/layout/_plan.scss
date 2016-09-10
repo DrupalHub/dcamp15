@@ -10,17 +10,24 @@
     display: table;
     line-height: 1;
 
+    .mobile {
+      display: none !important;
+    }
+
     .item {
 
       display: inline-flex;
       width: auto;
       clear: both;
-      border-spacing: 0 30px;
 
       div {
         float: left;
         display: table-column;
-        width: 120px;
+        width: 150px;
+      }
+
+      .info-wrapper {
+        display: block;
       }
     }
 

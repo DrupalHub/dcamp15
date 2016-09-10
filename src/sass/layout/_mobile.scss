@@ -20,6 +20,7 @@
         width: 100%;
         padding-top: 20px;
         border-bottom: 1px solid $color1;
+        right: 0;
 
         a {
           display: block;
@@ -38,11 +39,11 @@
 
   .strip {
     h1 {
-      font-size: 45px;
+      font-size: 80px;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 40px;
     }
 
     .ui.primary.button {
@@ -54,8 +55,7 @@
 
     p {
       font-size: 15px;
-      margin-left: 15px;
-      margin-right: 15px;
+      width: 90%;
     }
   }
 
@@ -63,13 +63,36 @@
 
     .items {
 
-      td.hour {
-        font-size: 40px;
-      }
+      .item {
+        display: inline-block;
 
-      td.info {
-        font-size: 20px;
+        .desktop {
+          display: none !important;
+        }
 
+        .mobile {
+          display: table-column !important;
+        }
+
+        .info {
+          width: 120px !important;
+        }
+
+        .hour.double {
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        .info.double {
+          width: 50% !important;
+          text-align: center;
+        }
+
+        .location.double {
+          margin-left: 15%;
+        }
       }
     }
   }
@@ -78,6 +101,13 @@
     left: 10%;
     top: 15%;
     height: 30%;
+  }
+
+  .support_us {
+
+    .info-wrapper {
+      margin-bottom: 10px;
+    }
   }
 
 }
@@ -93,16 +123,24 @@
   }
 
   .strip {
+
     h1 {
-      font-size: 100px;
+      font-size: 180px;
     }
 
     h2 {
-      font-size: 70px;
+      font-size: 90px;
     }
 
     .ui.primary.button {
       font-size: 30px;
+    }
+  }
+
+  .support_us {
+
+    .info-wrapper {
+      margin-bottom: 10px;
     }
   }
 
