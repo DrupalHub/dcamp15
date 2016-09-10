@@ -17,6 +17,7 @@
     "yamljs": "^0.2.8"
   },
   "devDependencies": {
+    "gulp-imagemin": "^3.0.3",
     "yamljs": "^0.2.8"
   }
 }
