@@ -1,4 +1,5 @@
 @import 'theme/variables';
+@import 'theme/fonts';
 @import 'layout/header';
 @import 'layout/upper_menu';
 @import 'layout/strip';
@@ -8,14 +9,16 @@
 @import 'layout/tickets';
 @import 'layout/map';
 @import 'layout/sponsors';
+@import 'layout/support_us';
 
 body, a, h1, h2, h3, h4, div, p, li {
-  font-family: oswald;
+  font-family: 'Bebas Neue';
 }
 
 h3 {
   padding-top: 100px;
   font-size: 70px;
+  text-transform: uppercase;
 }
 
 section {

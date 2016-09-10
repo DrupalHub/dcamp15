@@ -35,11 +35,21 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./dist/images'));
 });
 
+gulp.task('fonts-bebas', function() {
+  return gulp.src('./src/fonts/bebas/*')
+    .pipe(gulp.dest('./dist/fonts/bebas'));
+});
+
+gulp.task('fonts-vista', function() {
+  return gulp.src('./src/fonts/vista/*')
+    .pipe(gulp.dest('./dist/fonts/vista'));
+});
+
 gulp.task('speakers', function() {
   var tpl = '<div class="column speaker-wrapper" {{data}}>' +
-            '<a class="open"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
-            '<h4><a class="open">{{keynote}}{{name}}</a></h4>' +
-            '<a class="open">{{job}}</a>' +
+            '<a class="open image"><img src="images/{{image}}" class="ui small centered circular image" /></a>' +
+            '<h4><a class="open name">{{keynote}}{{name}}</a></h4>' +
+            '<a class="open job">{{job}}</a>' +
             '</div>';
 
   var keynote = '';
@@ -74,7 +84,46 @@ gulp.task('speakers', function() {
 
 });
 
-gulp.task('build', ['speakers', 'partials', 'sass', 'js', 'images']);
+gulp.task('plan', function() {
+  var result = YAML.load('./src/assets/plan.yml');
+
+  var items = [];
+
+  for (var key in result) {
+    var item = result[key];
+
+    var item_class = item['small'] != null ? 'double' : '';
+
+    var new_item = '<div class="item">';
+
+    if (item['small'] != null) {
+      new_item +=
+        '<div class="location small mobile ' + item_class + ' "><p>Small<br />hall</p></div>' +
+        '<div class="info right ' + item_class + ' ">' +
+          '<span>' + item['small']['title'] + '</span>' +
+          '<span>' + item['small']['speaker'] + '</span>' +
+        '</div>' +
+        '<div class="location small desktop ' + item_class + ' "><p>Small<br />hall</p></div>';
+    }
+
+    new_item +=
+      '<div class="hour ' + item_class + ' ">' + item['hour'] + '</div>' +
+        '<div class="location big ' + item_class + ' "><p>Main<br />hall</p></div>' +
+        '<div class="info ' + item_class + ' ">' +
+        '<span>' + item['main']['title'] + '</span>' +
+        '<span>' + item['main']['speaker'] + '</span>' +
+      '</div>';
+
+    new_item += '</div>';
+    new_item += '<div class="separator"></div>';
+
+    items.push(new_item);
+  }
+
+  fs.writeFileSync('src/html/includes/_plan_list.html', items.join(""));
+});
+
+gulp.task('build', ['speakers', 'plan', 'partials', 'sass', 'js', 'images', 'fonts-bebas', 'fonts-vista']);
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({

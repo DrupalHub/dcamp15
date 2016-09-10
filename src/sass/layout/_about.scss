@@ -1,20 +1,18 @@
 .about {
-  background: $color1;
+  background: $turquoise;
   padding-bottom: 100px;
 
   p {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vista', sans-serif;
     font-size: 20px;
-    line-height: 2;
+    line-height: 1.5;
+    width: 50%;
+    margin: auto;
+
+    span {
+      font-family: 'Vista', sans-serif;
+      font-weight: bold;
+    }
   }
 
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #f90;
-    margin: 0 auto;
-    width: 40%;
-    padding: 0;
-  }
 }

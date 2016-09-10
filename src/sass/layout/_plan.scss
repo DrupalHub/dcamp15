@@ -6,35 +6,80 @@
   .items {
     padding-top: 20px;
     margin: 0 auto;
-    text-align: left;
+    text-align: right;
+    display: table;
+    line-height: 1;
 
-    td {
-      padding-bottom: 10px;
+    .mobile {
+      display: none !important;
+    }
 
-      &.hour {
-        color: $color1;
-        font-size: 55px;
-        padding-right: 10px;
+    .item {
+
+      display: inline-flex;
+      width: auto;
+      clear: both;
+
+      div {
+        float: left;
+        display: table-column;
+        width: 150px;
       }
 
-      &.info {
-        font-size: 25px;
-        line-height: 1.25;
-        text-align: left;
-        padding-top: 5px;
+      .info-wrapper {
+        display: block;
+      }
+    }
 
-        span {
-          display: block;
-        }
+    .separator {
+      padding-bottom: 20px;
+    }
 
-        &.first {
-          padding-right: 10px;
-        }
+    .hour {
+      color: $turquoise;
+      font-size: 60px;
+      padding-right: 10px;
+    }
 
-        &.second {
-          border-left: #3acafc 1px solid;
-          padding-left: 10px;
+    .location {
+      padding-right: 10px;
+      width: 55px !important;
+
+      p {
+        background-color: $turquoise;
+        color: black;
+        border-radius: 50%;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        height: 45px;
+        padding: 11px 10px 10px;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+
+      &.small {
+
+        p {
+          background: white;
         }
+      }
+    }
+
+    .info {
+      font-size: 20px;
+      line-height: 1.25;
+      text-align: left;
+      padding-top: 5px;
+      width: 200px !important;
+
+      span {
+        display: block;
+      }
+
+      &.right {
+        text-align: right;
+        padding-right: 10px;
       }
     }
   }

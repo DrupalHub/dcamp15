@@ -6,6 +6,7 @@
   a {
     cursor: pointer;
     color: black;
+    font-size: 20px;
   }
 
   h3 {
@@ -13,15 +14,30 @@
   }
 
   .keynote {
-    color: $drupal-color;
+    color: $turquoise;
+  }
+
+  .grid {
+    justify-content: center;
+  }
+
+  .ui[class*="four column"].grid>.column:not(.row) {
+    width: auto;
   }
 
   .speaker-wrapper {
+    min-width: 260px !important;
 
     .ui.small.image, .ui.small.images .image, .ui.small.images img, .ui.small.images svg {
       width: auto;
       height: 150px;
     }
+
+    h4 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
   }
 
   .session-info {
@@ -65,7 +81,7 @@
       }
 
       p {
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Vista', sans-serif;
         font-size: 20px;
       }
 
