@@ -84,7 +84,46 @@ gulp.task('speakers', function() {
 
 });
 
-gulp.task('build', ['speakers', 'partials', 'sass', 'js', 'images', 'fonts-bebas', 'fonts-vista']);
+gulp.task('plan', function() {
+  var result = YAML.load('./src/assets/plan.yml');
+
+  var items = [];
+
+  for (var key in result) {
+    var item = result[key];
+
+    var new_item = '<div class="item">';
+
+    if (item['small'] != null) {
+      new_item +=
+        '<div class="info right">' +
+          '<span>' + item['small']['title'] + '</span>' +
+          '<span>' + item['small']['speaker'] + '</span>' +
+        '</div>' +
+        '<div class="location small"><p>Small<br />hall</p></div>';
+    }
+
+    new_item +=
+      '<div class="hour">' + item['hour'] + '</div>' +
+        '<div class="location big"><p>Main<br />hall</p></div>' +
+        '<div class="info">' +
+        '<span>' + item['main']['title'] + '</span>' +
+        '<span>' + item['main']['speaker'] + '</span>' +
+      '</div>';
+
+    new_item += '</div>';
+    new_item += '<div class="separator"></div>';
+
+    items.push(new_item);
+  }
+
+  fs.writeFileSync('src/html/includes/_plan_list.html', items.join(""));
+
+  console.log(items);
+
+});
+
+gulp.task('build', ['speakers', 'plan', 'partials', 'sass', 'js', 'images', 'fonts-bebas', 'fonts-vista']);
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({
