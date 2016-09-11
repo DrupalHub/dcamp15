@@ -6,7 +6,8 @@ var gulp 		      = require('gulp'),
     path = require('path'),
     YAML = require('yamljs'),
     imagemin = require('gulp-imagemin'),
-    gulpLoadPlugins = require('gulp-load-plugins');
+    gulpLoadPlugins = require('gulp-load-plugins'),
+    fontmin = require('gulp-fontmin');
 
 const $ = gulpLoadPlugins();
 
@@ -44,11 +45,13 @@ gulp.task('images', function() {
 
 gulp.task('fonts-bebas', function() {
   return gulp.src('./src/fonts/bebas/*')
+    .pipe(fontmin())
     .pipe(gulp.dest('./dist/fonts/bebas'));
 });
 
 gulp.task('fonts-vista', function() {
   return gulp.src('./src/fonts/vista/*')
+    .pipe(fontmin())
     .pipe(gulp.dest('./dist/fonts/vista'));
 });
 
