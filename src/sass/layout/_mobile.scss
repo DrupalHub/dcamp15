@@ -1,0 +1,147 @@
+@media only screen and (max-width: 600px) {
+
+  .ui.menu .item>i.icon {
+    margin: 0px 10px 0px 0px;
+  }
+
+  header {
+
+    .mobile.only {
+
+      .brand.item.title {
+        font-size: 20px;
+      }
+
+      .float-menu {
+        position: fixed;
+        top: 55px;
+        z-index: 20;
+        background: $color2;
+        width: 100%;
+        padding-top: 20px;
+        border-bottom: 1px solid $color1;
+        right: 0;
+
+        a {
+          display: block;
+          padding-left: 20px;
+          color: white;
+          font-size: 30px;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 45px;
+  }
+
+  .strip {
+    h1 {
+      font-size: 80px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .ui.primary.button {
+      font-size: 30px;
+    }
+  }
+
+  .about {
+
+    p {
+      font-size: 15px;
+      width: 90%;
+    }
+  }
+
+  .plan {
+
+    .items {
+
+      .item {
+        display: inline-block;
+
+        .desktop {
+          display: none !important;
+        }
+
+        .mobile {
+          display: table-column !important;
+        }
+
+        .info {
+          width: 120px !important;
+        }
+
+        .hour.double {
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        .info.double {
+          width: 50% !important;
+          text-align: center;
+        }
+
+        .location.double {
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+
+  .speakers .session-info {
+    left: 10%;
+    top: 15%;
+    height: 30%;
+  }
+
+  .support_us {
+
+    .info-wrapper {
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+  .computer .right.menu li {
+    font-size: 15px;
+  }
+
+  .computer .ui.menu .item {
+    font-size: 20px;
+  }
+
+  .strip {
+
+    h1 {
+      font-size: 180px;
+    }
+
+    h2 {
+      font-size: 90px;
+    }
+
+    .ui.primary.button {
+      font-size: 30px;
+    }
+  }
+
+  .support_us {
+
+    .info-wrapper {
+      margin-bottom: 10px;
+    }
+  }
+
+}

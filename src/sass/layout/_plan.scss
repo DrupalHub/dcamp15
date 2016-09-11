@@ -1,0 +1,86 @@
+.plan {
+  background: $color2;
+  color: white;
+  padding-bottom: 100px;
+
+  .items {
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: right;
+    display: table;
+    line-height: 1;
+
+    .mobile {
+      display: none !important;
+    }
+
+    .item {
+
+      display: inline-flex;
+      width: auto;
+      clear: both;
+
+      div {
+        float: left;
+        display: table-column;
+        width: 150px;
+      }
+
+      .info-wrapper {
+        display: block;
+      }
+    }
+
+    .separator {
+      padding-bottom: 20px;
+    }
+
+    .hour {
+      color: $turquoise;
+      font-size: 60px;
+      padding-right: 10px;
+    }
+
+    .location {
+      padding-right: 10px;
+      width: 55px !important;
+
+      p {
+        background-color: $turquoise;
+        color: black;
+        border-radius: 50%;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        height: 45px;
+        padding: 11px 10px 10px;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+
+      &.small {
+
+        p {
+          background: white;
+        }
+      }
+    }
+
+    .info {
+      font-size: 20px;
+      line-height: 1.25;
+      text-align: left;
+      padding-top: 5px;
+      width: 200px !important;
+
+      span {
+        display: block;
+      }
+
+      &.right {
+        text-align: right;
+        padding-right: 10px;
+      }
+    }
+  }
+}
