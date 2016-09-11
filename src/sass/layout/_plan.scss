@@ -3,6 +3,22 @@
   color: white;
   padding-bottom: 100px;
 
+  .submit-session {
+
+    p {
+      font-family: 'Vista';
+      font-size: 20px;
+    }
+
+    .ui.primary.button {
+      margin-top: 50px;
+      background: $turquoise;
+      color: black;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+  }
+
   .items {
     padding-top: 20px;
     margin: 0 auto;
