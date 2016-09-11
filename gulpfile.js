@@ -4,7 +4,12 @@ var gulp 		      = require('gulp'),
 	  injectPartials  = require('gulp-inject-partials'),
     fs = require('fs'),
     path = require('path'),
-    YAML = require('yamljs');
+    YAML = require('yamljs'),
+    imagemin = require('gulp-imagemin'),
+    gulpLoadPlugins = require('gulp-load-plugins'),
+    fontmin = require('gulp-fontmin');
+
+const $ = gulpLoadPlugins();
 
 // Handles partials injection on index.html
 gulp.task('partials', function () {
@@ -12,6 +17,7 @@ gulp.task('partials', function () {
            .pipe(injectPartials({
              removeTags: true
            }))
+    .pipe($.htmlmin({collapseWhitespace: true}))
            .pipe(gulp.dest('./dist'));
 });
 
@@ -19,7 +25,7 @@ gulp.task('partials', function () {
 gulp.task('sass', function () {
   return gulp.src('./src/sass/style.scss')
     .pipe(sass().on('error', sass.logError))
-    // .pipe(prefix({ browsers: ['last 3 versions'] }))
+    .pipe($.cssmin())
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
 });
@@ -27,21 +33,25 @@ gulp.task('sass', function () {
 // todo: Add js performance when deploying.
 gulp.task('js', function() {
   return gulp.src('./src/js/main.js')
+    .pipe($.uglify())
     .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('images', function() {
   return gulp.src('./src/images/*')
+    .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'));
 });
 
 gulp.task('fonts-bebas', function() {
   return gulp.src('./src/fonts/bebas/*')
+    .pipe(fontmin())
     .pipe(gulp.dest('./dist/fonts/bebas'));
 });
 
 gulp.task('fonts-vista', function() {
   return gulp.src('./src/fonts/vista/*')
+    .pipe(fontmin())
     .pipe(gulp.dest('./dist/fonts/vista'));
 });
 
@@ -92,19 +102,20 @@ gulp.task('plan', function() {
   for (var key in result) {
     var item = result[key];
 
-    var item_class = item['small'] != null ? 'double' : '';
+    // var item_class = item['small'] != null ? 'double' : '';
+    var item_class = '';
 
     var new_item = '<div class="item">';
 
-    if (item['small'] != null) {
-      new_item +=
-        '<div class="location small mobile ' + item_class + ' "><p>Small<br />hall</p></div>' +
-        '<div class="info right ' + item_class + ' ">' +
-          '<span>' + item['small']['title'] + '</span>' +
-          '<span>' + item['small']['speaker'] + '</span>' +
-        '</div>' +
-        '<div class="location small desktop ' + item_class + ' "><p>Small<br />hall</p></div>';
-    }
+    // if (item['small'] != null) {
+    //   new_item +=
+    //     '<div class="location small mobile ' + item_class + ' "><p>Small<br />hall</p></div>' +
+    //     '<div class="info right ' + item_class + ' ">' +
+    //       '<span>' + item['small']['title'] + '</span>' +
+    //       '<span>' + item['small']['speaker'] + '</span>' +
+    //     '</div>' +
+    //     '<div class="location small desktop ' + item_class + ' "><p>Small<br />hall</p></div>';
+    // }
 
     new_item +=
       '<div class="hour ' + item_class + ' ">' + item['hour'] + '</div>' +
