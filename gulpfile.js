@@ -4,7 +4,11 @@ var gulp 		      = require('gulp'),
 	  injectPartials  = require('gulp-inject-partials'),
     fs = require('fs'),
     path = require('path'),
-    YAML = require('yamljs');
+    YAML = require('yamljs'),
+    imagemin = require('gulp-imagemin'),
+    gulpLoadPlugins = require('gulp-load-plugins');
+
+const $ = gulpLoadPlugins();
 
 // Handles partials injection on index.html
 gulp.task('partials', function () {
@@ -12,6 +16,7 @@ gulp.task('partials', function () {
            .pipe(injectPartials({
              removeTags: true
            }))
+    .pipe($.htmlmin({collapseWhitespace: true}))
            .pipe(gulp.dest('./dist'));
 });
 
@@ -19,7 +24,7 @@ gulp.task('partials', function () {
 gulp.task('sass', function () {
   return gulp.src('./src/sass/style.scss')
     .pipe(sass().on('error', sass.logError))
-    // .pipe(prefix({ browsers: ['last 3 versions'] }))
+    .pipe($.cssmin())
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
 });
@@ -27,6 +32,7 @@ gulp.task('sass', function () {
 // todo: Add js performance when deploying.
 gulp.task('js', function() {
   return gulp.src('./src/js/main.js')
+    .pipe($.uglify())
     .pipe(gulp.dest('./dist/js'));
 });
 
