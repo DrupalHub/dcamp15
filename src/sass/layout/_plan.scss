@@ -23,7 +23,7 @@
       div {
         float: left;
         display: table-column;
-        width: 150px;
+        width: 120px;
       }
 
       .info-wrapper {
@@ -39,6 +39,7 @@
       color: $turquoise;
       font-size: 60px;
       padding-right: 10px;
+      text-align: center;
     }
 
     .location {
@@ -53,9 +54,9 @@
         text-align: center;
         text-transform: uppercase;
         height: 45px;
-        padding: 11px 10px 10px;
-        font-size: 13px;
+        font-size: 15px;
         margin-top: 5px;
+        padding: 10px;
       }
 
       &.small {

@@ -92,19 +92,20 @@ gulp.task('plan', function() {
   for (var key in result) {
     var item = result[key];
 
-    var item_class = item['small'] != null ? 'double' : '';
+    // var item_class = item['small'] != null ? 'double' : '';
+    var item_class = '';
 
     var new_item = '<div class="item">';
 
-    if (item['small'] != null) {
-      new_item +=
-        '<div class="location small mobile ' + item_class + ' "><p>Small<br />hall</p></div>' +
-        '<div class="info right ' + item_class + ' ">' +
-          '<span>' + item['small']['title'] + '</span>' +
-          '<span>' + item['small']['speaker'] + '</span>' +
-        '</div>' +
-        '<div class="location small desktop ' + item_class + ' "><p>Small<br />hall</p></div>';
-    }
+    // if (item['small'] != null) {
+    //   new_item +=
+    //     '<div class="location small mobile ' + item_class + ' "><p>Small<br />hall</p></div>' +
+    //     '<div class="info right ' + item_class + ' ">' +
+    //       '<span>' + item['small']['title'] + '</span>' +
+    //       '<span>' + item['small']['speaker'] + '</span>' +
+    //     '</div>' +
+    //     '<div class="location small desktop ' + item_class + ' "><p>Small<br />hall</p></div>';
+    // }
 
     new_item +=
       '<div class="hour ' + item_class + ' ">' + item['hour'] + '</div>' +
