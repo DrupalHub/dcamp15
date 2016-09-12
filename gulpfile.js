@@ -134,6 +134,11 @@ gulp.task('plan', function() {
   fs.writeFileSync('src/html/includes/_plan_list.html', items.join(""));
 });
 
+gulp.task('deploy', ['build'], function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 gulp.task('build', ['speakers', 'plan', 'partials', 'sass', 'js', 'images', 'fonts-bebas', 'fonts-vista']);
 
 gulp.task('serve', ['build'], function() {
