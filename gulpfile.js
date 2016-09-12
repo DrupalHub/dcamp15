@@ -7,7 +7,8 @@ var gulp 		      = require('gulp'),
     YAML = require('yamljs'),
     imagemin = require('gulp-imagemin'),
     gulpLoadPlugins = require('gulp-load-plugins'),
-    fontmin = require('gulp-fontmin');
+    fontmin = require('gulp-fontmin'),
+    ghPages = require('gulp-gh-pages');
 
 const $ = gulpLoadPlugins();
 
