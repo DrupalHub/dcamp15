@@ -1,0 +1,74 @@
+1:
+  hour: '09:00'
+  main:
+    title: Opening
+    speaker: Roy Segall
+2:
+  hour: '09:30'
+  main:
+    title: Keynote
+    speaker: Bojan
+3:
+  hour: '10:30'
+  main:
+    title: It's tome to get real!
+    speaker: Roy Segall
+  small:
+    title: Why we choose Drupal
+    speaker: Yad va shem
+4:
+  hour: '11:15'
+  main:
+    title: It's tome to get real!
+    speaker: Roy Segall
+
+5:
+  hour: '12:00'
+  main:
+    title: Keynote
+    speaker: Enjoy!
+6:
+  hour: '13:00'
+  main:
+    title: It's tome to get real!
+    speaker: Roy Segall
+  small:
+    title: Why we choose Drupal
+    speaker: Yad va shem
+7:
+  hour: '13:45'
+  main:
+    title: It's tome to get real!
+    speaker: Roy Segall
+
+8:
+  hour: '14:30'
+  main:
+    title: It's tome to get real!
+    speaker: Roy Segall
+  small:
+    title: Why we choose Drupal
+    speaker: Yad va shem
+9:
+  hour: '15:15'
+  main:
+    title: Siesta
+    speaker: Take a small break
+10:
+  hour: '15:30'
+  main:
+    title: It's tome to get real!
+    speaker: Roy Segall
+  small:
+    title: Why we choose Drupal
+    speaker: Yad va shem
+11:
+  hour: '16:15'
+  main:
+    title: Closing up!
+    speaker: Roy Segall
+12:
+  hour: '17:00'
+  main:
+    title: Trivia!
+    speaker: DrupalCamp team

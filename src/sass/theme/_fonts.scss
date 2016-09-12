@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Vista';
+  src: url('../fonts/vista/vistasansaltlight.eot');
+  src: url('../fonts/vista/vistasansaltlight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/vista/vistasansaltlight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vista';
+  src: url('../fonts/vista/vistasansaltbold.eot');
+  src: url('../fonts/vista/vistasansaltbold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/vista/vistasansaltbold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: normal;
+  src: local('Bebas Neue'), url('../fonts/bebas/BebasNeueRegular.otf');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: bold;
+  src: local('Bebas Neue'), url('../fonts/bebas/BebasNeueBold.otf');
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: 100;
+  src: local('Bebas Neue'), url('../fonts/bebas/BebasNeueThin.otf');
+}

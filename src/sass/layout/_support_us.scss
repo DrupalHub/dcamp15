@@ -1,0 +1,80 @@
+.support_us {
+
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+  h3 {
+    padding-bottom: 50px;
+  }
+
+  .info {
+
+    .info-wrapper {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 250px;
+      padding: 15px 0px 15px 10px;
+
+      .button {
+        width: 90%;
+        background: white;
+        padding: 15px;
+        border-radius: 0;
+        font-size: 30px;
+        font-family: Bebas Neue;
+        color: black;
+      }
+
+      h4 {
+        font-size: 55px;
+        text-transform: uppercase;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+        padding-bottom: 10px;
+
+        li {
+          font-family: 'Vista', sans-serif;
+          font-size: 15px;
+          list-style-type: disc;
+          text-align: left;
+          padding-bottom: 10px;
+        }
+
+      }
+
+      &.silver {
+        background-color: #333333;
+        color: white;
+
+        ul {
+          padding-bottom: 116px;
+        }
+      }
+
+      &.gold {
+        background: $turquoise;
+
+        h4 {
+          color: white;
+        }
+
+        ul {
+          padding-bottom: 58px;
+        }
+
+        .button {
+          color: $turquoise;
+        }
+      }
+
+      &.platinum {
+        background: #f2f2f2;
+      }
+    }
+  }
+
+}

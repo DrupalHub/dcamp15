@@ -1,0 +1,32 @@
+.sponsors {
+
+  padding-top: 100px;
+
+  ul {
+
+    li {
+      list-style-type: none;
+      display: inline-flex;
+
+      a {
+        padding: 0 15px 40px;
+
+        &#gizra {
+          font-family: Abril Fatface;
+          font-size: 60px;
+          text-decoration: none;
+          color: #e27058;
+          padding-bottom: 40px;
+        }
+
+        &#dofinity {
+          font-family: "open_sansregular", sans-serif;
+          font-size: 60px;
+          text-decoration: none;
+          color: black;
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}
