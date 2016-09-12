@@ -15,11 +15,16 @@ const $ = gulpLoadPlugins();
 // Handles partials injection on index.html
 gulp.task('partials', function () {
   return gulp.src('./src/html/index.html')
-           .pipe(injectPartials({
-             removeTags: true
-           }))
+    .pipe(injectPartials({
+      removeTags: true
+    }))
     .pipe($.htmlmin({collapseWhitespace: true}))
-           .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('cname', function () {
+  return gulp.src('./src/CNAME')
+    .pipe(gulp.dest('./dist'));
 });
 
 // Compiles, prefixes and minifies style.scss & fruits.scss
@@ -140,7 +145,7 @@ gulp.task('deploy', ['build'], function() {
     .pipe(ghPages());
 });
 
-gulp.task('build', ['speakers', 'plan', 'partials', 'sass', 'js', 'images', 'fonts-bebas', 'fonts-vista']);
+gulp.task('build', ['cname', 'speakers', 'plan', 'partials', 'sass', 'js', 'images', 'fonts-bebas', 'fonts-vista']);
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({
