@@ -68,7 +68,7 @@ gulp.task('speakers', function() {
             '<a class="open job">{{job}}</a>' +
             '</div>';
 
-  var keynote = '';
+  var keynote = [];
 
   fs.readdir('./src/speakers', function(err, files) {
     var content = files.map(function(file) {
@@ -85,15 +85,15 @@ gulp.task('speakers', function() {
         .replace('{{image}}', result.image);
 
       if (result.keynote != undefined) {
-        keynote = speaker_info
-          .replace('{{keynote}}', '<span class="keynote">Keynote: </span>');
+        keynote.push(speaker_info
+          .replace('{{keynote}}', '<span class="keynote">Keynote: </span>'));
         return '';
       }
 
       return speaker_info.replace('{{keynote}}', '');
     });
 
-    content.unshift(keynote);
+    content.unshift(keynote.join(""));
 
     fs.writeFileSync('src/html/includes/_speaker_list.html', content.join(""));
   });

@@ -9,7 +9,7 @@
       display: inline-flex;
 
       a {
-        padding: 0 15px 40px;
+        padding: 0 15px 0 20px;
 
         &#gizra {
           font-family: Abril Fatface;
@@ -21,10 +21,15 @@
 
         &#dofinity {
           font-family: "open_sansregular", sans-serif;
-          font-size: 60px;
+          font-size: 45px;
           text-decoration: none;
           color: black;
           padding-bottom: 40px;
+        }
+
+        &#amazeelabs {
+          padding: 0;
+          width: 90px;
         }
       }
     }
