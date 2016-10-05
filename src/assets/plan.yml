@@ -1,15 +1,11 @@
-
-
 1:
   hour: '08:00'
   main:
     title: Getting together
-    speaker: ""
 2:
   hour: '08:30'
   main:
     title: Light breakfast
-    speaker: ""
 3:
   hour: '09:00'
   main:
@@ -41,7 +37,6 @@
   hour: '12:00'
   main:
     title: Lunch
-    speaker: ""
 
 8:
   hour: '13:00'
@@ -62,7 +57,7 @@
     title: Dofinity speaker - TBD
     speaker: TBD
   small:
-    title: Entity storage in Drupal 8 and real time interactions
+    title: Drupal 8 entity storage and real time
     speaker: Roy Segall
 11:
   hour: '15:15'
@@ -81,8 +76,7 @@
   hour: '16:15'
   main:
     title: Preperation for Trivia!
-    speaker: ""
 14:
   hour: 16:30
-  main: Trivia!
-  speaker: ""
+  main:
+    title: Trivia!
