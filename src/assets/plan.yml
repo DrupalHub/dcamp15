@@ -2,15 +2,18 @@
   hour: '08:00'
   main:
     title: Getting together
+
 2:
   hour: '08:30'
   main:
     title: Light breakfast
+
 3:
   hour: '09:00'
   main:
     title: Opening
     speaker: DrupalCamp team
+
 4:
   hour: '09:30'
   main:
@@ -22,9 +25,7 @@
   main:
     title: A quick look at Gizra's stack and how Drupal 8 fits in
     speaker: Amitai Burstein
-  small:
-    title: Advanced issues in Git
-    speaker: Nir Geier
+
 6:
   hour: '11:15'
   main:
@@ -43,6 +44,7 @@
   main:
     title: The future of Drupal
     speaker: Michael Schnitzel Shmidt
+
 9:
   hour: '13:45'
   main:
@@ -50,7 +52,8 @@
     speaker: Amir Tair
   small:
     title: Devloper tools
-    speaker: Aron(linnovate)
+    speaker: Aron Stein
+
 10:
   hour: '14:30'
   main:
@@ -59,11 +62,13 @@
   small:
     title: Drupal 8 entity storage and real time
     speaker: Roy Segall
+
 11:
   hour: '15:15'
   main:
     title: Siesta
     speaker: Take a small rest
+
 12:
   hour: '15:30'
   main:
@@ -72,10 +77,12 @@
   small:
     title: Accessability for website
     speaker: Ilnna Benish
+
 13:
   hour: '16:15'
   main:
     title: Preperation for Trivia!
+
 14:
   hour: 16:30
   main:

@@ -117,7 +117,7 @@ gulp.task('plan', function() {
       speaker = item['small']['speaker'] != null ? '<span>' + item['small']['speaker'] + '</span>' : '';
 
       new_item +=
-        '<div class="item">' +
+        '<div class="item secondary">' +
           '<div class="hour">' + item['hour'] + '</div>' +
           '<div class="location small ' + item_class + ' "><p>Small<br />hall</p></div>' +
             '<div class="info ' + item_class + ' ">' +

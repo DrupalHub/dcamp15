@@ -97,7 +97,13 @@
           font-size: 50px;
           padding-top: 0;
         }
+      }
 
+      &.secondary {
+
+        .hour {
+          color: white;
+        }
       }
     }
 
