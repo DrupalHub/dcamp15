@@ -25,7 +25,7 @@
   .items {
     padding-top: 20px;
     margin: 0 auto;
-    text-align: right;
+    text-align: left;
     display: table;
     line-height: 1;
 
@@ -42,65 +42,74 @@
       div {
         float: left;
         display: table-column;
-        width: 120px;
       }
 
       .info-wrapper {
         display: block;
       }
-    }
 
-    .separator {
-      padding-bottom: 20px;
-    }
-
-    .hour {
-      color: $turquoise;
-      font-size: 60px;
-      padding-right: 10px;
-      text-align: center;
-    }
-
-    .location {
-      padding-right: 10px;
-      width: 55px !important;
-
-      p {
-        background-color: $turquoise;
-        color: black;
-        border-radius: 50%;
-        line-height: 1;
-        text-align: center;
-        text-transform: uppercase;
-        height: 45px;
-        font-size: 15px;
-        margin-top: 5px;
-        padding: 10px;
+      .hour {
+        color: $turquoise;
+        font-size: 60px;
+        padding-right: 10px;
+        text-align: left;
+        width: 110px;
       }
 
-      &.small {
+      .location {
+        padding-right: 10px;
+        width: 55px !important;
 
         p {
-          background: white;
+          background-color: $turquoise;
+          color: black;
+          border-radius: 50%;
+          line-height: 1;
+          text-align: center;
+          text-transform: uppercase;
+          height: 45px;
+          font-size: 15px;
+          margin-top: 5px;
+          padding: 10px;
+        }
+
+        &.small {
+
+          p {
+            background: white;
+          }
+        }
+      }
+
+      .info {
+        font-size: 20px;
+        line-height: 1.25;
+        text-align: left;
+        padding-top: 5px;
+
+        span {
+          display: block;
+        }
+      }
+
+      &.alone {
+
+        .info {
+          font-size: 50px;
+          padding-top: 0;
+        }
+      }
+
+      &.secondary {
+
+        .hour {
+          color: white;
         }
       }
     }
 
-    .info {
-      font-size: 20px;
-      line-height: 1.25;
-      text-align: left;
-      padding-top: 5px;
-      width: 200px !important;
-
-      span {
-        display: block;
-      }
-
-      &.right {
-        text-align: right;
-        padding-right: 10px;
-      }
+    .separator {
+      padding-bottom: 20px;
     }
   }
 }

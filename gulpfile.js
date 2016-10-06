@@ -110,25 +110,34 @@ gulp.task('plan', function() {
 
     // var item_class = item['small'] != null ? 'double' : '';
     var item_class = '';
+    var new_item = '';
+    var speaker;
 
-    var new_item = '<div class="item">';
+    if (item['small'] != null) {
+      speaker = item['small']['speaker'] != null ? '<span>' + item['small']['speaker'] + '</span>' : '';
 
-    // if (item['small'] != null) {
-    //   new_item +=
-    //     '<div class="location small mobile ' + item_class + ' "><p>Small<br />hall</p></div>' +
-    //     '<div class="info right ' + item_class + ' ">' +
-    //       '<span>' + item['small']['title'] + '</span>' +
-    //       '<span>' + item['small']['speaker'] + '</span>' +
-    //     '</div>' +
-    //     '<div class="location small desktop ' + item_class + ' "><p>Small<br />hall</p></div>';
-    // }
+      new_item +=
+        '<div class="item secondary">' +
+          '<div class="hour">' + item['hour'] + '</div>' +
+          '<div class="location small ' + item_class + ' "><p>Small<br />hall</p></div>' +
+            '<div class="info ' + item_class + ' ">' +
+              '<span>' + item['small']['title'] + '</span>' +
+                speaker +
+            '</div>' +
+        '</div>';
+      new_item += '<div class="separator"></div>';
+    }
+
+    var alone_class = item['main']['speaker'] == null ? 'alone' : '';
+    new_item += '<div class="item ' + alone_class + '">';
+    speaker = item['main']['speaker'] != null ? '<span>' + item['main']['speaker'] + '</span>' : '';
 
     new_item +=
       '<div class="hour ' + item_class + ' ">' + item['hour'] + '</div>' +
         '<div class="location big ' + item_class + ' "><p>Main<br />hall</p></div>' +
         '<div class="info ' + item_class + ' ">' +
         '<span>' + item['main']['title'] + '</span>' +
-        '<span>' + item['main']['speaker'] + '</span>' +
+        speaker +
       '</div>';
 
     new_item += '</div>';
