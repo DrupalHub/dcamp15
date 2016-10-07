@@ -165,3 +165,28 @@
   }
 
 }
+
+@media only screen and (max-width : 680px) {
+
+  .sponsors {
+
+    li {
+      padding-bottom: 20px;
+      width: 50%;
+
+      a {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 500px) {
+
+  .sponsors {
+
+    li {
+      width: 100%;
+    }
+  }
+}

@@ -25,7 +25,7 @@
 6:
   hour: '11:15'
   main:
-    title: Drupal 8 and Docket containers
+    title: Drupal docker development delight
     speaker: Lior Kesos
   small:
     title: Time boxing
@@ -53,7 +53,7 @@
 10:
   hour: '14:30'
   main:
-    title: Dofinity speaker - TBD
+    title: TBD
     speaker: TBD
   small:
     title: Drupal 8 entity storage and real time
@@ -71,8 +71,8 @@
     title: Inbal Jona
     speaker: Development with Drupal Console
   small:
-    title: Accessability for website
-    speaker: Ilnna Benish
+    title: Website Accessibility
+    speaker: Eilana Benish
 
 13:
   hour: '16:15'
