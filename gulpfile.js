@@ -113,6 +113,22 @@ gulp.task('plan', function() {
     var new_item = '';
     var speaker;
 
+    var alone_class = item['main']['speaker'] == null ? 'alone' : '';
+    new_item += '<div class="item ' + alone_class + '">';
+    speaker = item['main']['speaker'] != null ? '<span>' + item['main']['speaker'] + '</span>' : '';
+
+    new_item +=
+      '<div class="hour ' + item_class + ' ">' + item['hour'] + '</div>' +
+        '<div class="location big ' + item_class + ' "><p>Main<br />hall</p></div>' +
+        '<div class="info ' + item_class + ' ">' +
+        '<span>' + item['main']['title'] + '</span>' +
+        speaker +
+      '</div>';
+
+    new_item += '</div>';
+
+    new_item += '<div class="separator"></div>';
+
     if (item['small'] != null) {
       speaker = item['small']['speaker'] != null ? '<span>' + item['small']['speaker'] + '</span>' : '';
 
@@ -127,21 +143,6 @@ gulp.task('plan', function() {
         '</div>';
       new_item += '<div class="separator"></div>';
     }
-
-    var alone_class = item['main']['speaker'] == null ? 'alone' : '';
-    new_item += '<div class="item ' + alone_class + '">';
-    speaker = item['main']['speaker'] != null ? '<span>' + item['main']['speaker'] + '</span>' : '';
-
-    new_item +=
-      '<div class="hour ' + item_class + ' ">' + item['hour'] + '</div>' +
-        '<div class="location big ' + item_class + ' "><p>Main<br />hall</p></div>' +
-        '<div class="info ' + item_class + ' ">' +
-        '<span>' + item['main']['title'] + '</span>' +
-        speaker +
-      '</div>';
-
-    new_item += '</div>';
-    new_item += '<div class="separator"></div>';
 
     items.push(new_item);
   }
