@@ -21,6 +21,9 @@
   main:
     title: A quick look at Gizra's stack and how Drupal 8 fits in
     speaker: Amitai Burstein
+  small:
+    title: Drupal@Azure
+    speaker: Microsoft TBD
 
 6:
   hour: '11:15'
